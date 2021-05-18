@@ -1,0 +1,27 @@
+{
+  "name": "markdown-blog",
+  "version": "1.0.0",
+  "description": "Simple Markdown blog using node js, express, mongodb and some third party npm dependencies. This project follow MVC pattern of development.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mohammad-Mesbaul-Haque/Markdown-Blog.git"
+  },
+  "keywords": [
+    "Markdown-Blog",
+    "nodejs",
+    "express",
+    "mongoose",
+    "MVC",
+    "ejs"
+  ],
+  "author": "Mohammad Mesbaul Haque",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mohammad-Mesbaul-Haque/Markdown-Blog/issues"
+  },
+  "homepage": "https://github.com/Mohammad-Mesbaul-Haque/Markdown-Blog#readme"
+}
