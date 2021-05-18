@@ -23,7 +23,7 @@ router.get('/', (req, res)=>{
         createdAt: new Date(),
         description: 'My first blog app'
     }]
-    res.render('index', {articles: articles})
+    res.render('articles/index', {articles: articles})
 })
 
 
