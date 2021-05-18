@@ -6,14 +6,23 @@
  */
 
 // Dependencies.
+const express = require('express');
 
 
 
 // Module scaffolding.
+const app = express();
 
-
+app.set('view engine', 'ejs');
 // main functions or objects.
+app.get('/', (req, res)=>{
+    res.render('index')
+})
 
 
 
+
+app.listen(3000, ()=>{
+    console.log(`listening Markdown app`);
+})
 // export the module.
