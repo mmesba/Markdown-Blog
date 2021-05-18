@@ -7,6 +7,7 @@
 
 // Dependencies.
 const express = require('express');
+const articleRouter = require('./routes/articles')
 
 
 
@@ -20,6 +21,8 @@ app.get('/', (req, res)=>{
 })
 
 
+// give permission to use modules
+app.use('/articles', articleRouter);
 
 
 app.listen(3000, ()=>{
