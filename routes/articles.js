@@ -12,22 +12,14 @@ const router = express.Router();
 
 
 // Main functions.
-router.get('/', (req, res)=>{
-    const articles = [{
-        title: 'Test Article',
-        createdAt: new Date(),
-        description: 'My first blog app'
-    },
-    {
-        title: 'Test Article 2',
-        createdAt: new Date(),
-        description: 'My first blog app'
-    }]
-    res.render('articles/index', {articles: articles})
+router.get('/new', (req, res)=>{
+    res.render('articles/new');
 })
 
 
-
+router.post('/', (req, res)=>{
+    
+})
 
 
 
