@@ -23,8 +23,10 @@
   },
   "homepage": "https://github.com/Mohammad-Mesbaul-Haque/Markdown-Blog#readme",
   "dependencies": {
+    "dompurify": "^2.2.8",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "jsdom": "^16.5.3",
     "marked": "^2.0.3",
     "method-override": "^3.0.0",
     "mongoose": "^5.12.9",
