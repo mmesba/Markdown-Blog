@@ -7,6 +7,7 @@
 
 // Dependencies.
 const express = require('express');
+const methodOverride = require('method-override');
 const mongoose = require('mongoose');
 const Article = require('./models/Article')
 const articleRouter = require('./routes/articles');
@@ -19,6 +20,7 @@ useCreateIndex: true})
 // Module scaffolding.
 const app = express();
 app.use(express.urlencoded({extended: false}));
+app.use(methodOverride('_method'));
 
 app.set('view engine', 'ejs');
 // main functions or objects.
