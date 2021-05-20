@@ -10,7 +10,7 @@ const express = require('express');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
 const Article = require('./models/Article')
-const articleRouter = require('./routes/articles');
+const articleRouter = require('./controllers/articles');
 
 //connect with mongodb
 mongoose.connect('mongodb://localhost/markdown_blog', {useNewUrlParser: true,
