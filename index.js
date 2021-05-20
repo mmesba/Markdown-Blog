@@ -8,8 +8,7 @@
 // Dependencies.
 const express = require('express');
 const mongoose = require('mongoose');
-const articleRouter = require('./routes/articles')
-
+const articleRouter = require('./routes/articles');
 
 //connect with mongodb
 mongoose.connect('mongodb://localhost/markdown_blog', {useNewUrlParser: true,
@@ -17,6 +16,7 @@ useUnifiedTopology: true})
 
 // Module scaffolding.
 const app = express();
+app.use(express.urlencoded({extended: false}));
 
 app.set('view engine', 'ejs');
 // main functions or objects.
