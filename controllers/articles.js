@@ -68,3 +68,48 @@ function saveArticleAndRedirect(path) {
 
 // export the module.
 module.exports = router;
+
+
+/*
+    function saveArticleAndRedirect(path) {
+    return async(req, res)=>{
+        let article = req.article
+            article.title= req.body.title;
+            article.description= req.body.description;
+            article.markdown= req.body.markdown;
+        
+        try {
+            Article.findOne({title: req.body.title}, (err, data)=>{
+                if(err){
+                    console.log(err.message);
+                    res.render(`articles/${path}`, {article: article})
+                } if(!data){
+                    console.log('failed');
+                    article =   article.save();
+                    //if successfully save article , redirect
+                    res.redirect(`/articles/${article.slug}`);
+                } 
+                else{
+                    var data = data;
+                }
+            });
+            // console.log(check.title);
+            if (data.title) {
+                res.render(`articles/${path}`, {article: article});
+            } else {
+                article =   await article.save();
+          //if successfully save article , redirect
+          res.redirect(`/articles/${article.slug}`);
+            }
+            // article =   await article.save();
+            //if successfully save article , redirect
+            // res.redirect(`/articles/${article.slug}`)
+          // it will redirect to the show page where the newly saved data will be arrived
+    
+        } catch (err) {
+            console.error(err.message);
+            res.render(`articles/${path}`, {article: article})
+        }
+    }}
+
+*/
