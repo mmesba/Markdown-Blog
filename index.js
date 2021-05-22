@@ -33,6 +33,17 @@ app.get('/', async(req, res)=>{
 // give permission to use modules
 app.use('/articles', articleRouter);
 
+//implementing error handler
+const errorHandler = (err, req, res, next) =>{
+        if (err.message) {
+            res.send(err.message)
+        } else {
+            res.send('There was an error !!');
+        }
+}
+
+
+app.use(errorHandler);
 
 app.listen(3000, ()=>{
     console.log(`listening Markdown app`);
