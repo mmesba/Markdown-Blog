@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Markdown-Blog, Blogging app, nodejs, express, mongoose"
+    />
+    <meta name="author" content="Mohammad Mesbaul Haque" />
+    <meta
+      name="author-profile"
+      content="https://github.com/mohammad-mesbaul-haque"
+    />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    /> -->
+    <link href= "/public/css/notFound.css" rel="stylesheet" type="text/css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4b9ba14b0f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Page Not Found</title>
+  </head>
+  <body>
+    <div class="mainbox">
+      <div class="err">4</div>
+      <i class="far fa-question-circle fa-spin"></i>
+      <div class="err2">4</div>
+      <div class="msg">
+        Your requested page
+        <p class="requsetdLink"><%= url.toString() %></p> doesn't exist. Please
+        insert correct URL.
+        <p>Or, Let's go <a href="/">Home</a> and try from there.</p>
+      </div>
+    </div>
+  </body>
+</html>

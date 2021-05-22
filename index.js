@@ -19,7 +19,14 @@ useCreateIndex: true})
 
 // Module scaffolding.
 const app = express();
+app.use(express.json())
+// linking static assets
+app.use(express.static(__dirname + '/public'));
+app.use('/public', express.static('public'));
+
+
 app.use(express.urlencoded({extended: false}));
+// using method override in app
 app.use(methodOverride('_method'));
 
 app.set('view engine', 'ejs');
@@ -41,8 +48,10 @@ const errorHandler = (err, req, res, next) =>{
             res.send('There was an error !!');
         }
 }
-
-
+// 404 page rendering.
+app.get('*', (req, res)=>{
+    res.render('articles/notFound.ejs', {url : req.originalUrl})
+})
 app.use(errorHandler);
 
 app.listen(3000, ()=>{
