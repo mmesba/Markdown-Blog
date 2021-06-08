@@ -4,7 +4,7 @@
   "description": "Simple Markdown blog using node js, express, mongodb and some third party npm dependencies. This project follow MVC pattern of development.",
   "main": "index.js",
   "scripts": {
-    "start": "SET NODE_ENV=staging&&nodemon index",
+    "start": "SET NODE_ENV=staging&&node index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "git+https://github.com/Mohammad-Mesbaul-Haque/Markdown-Blog.git",
