@@ -13,7 +13,7 @@ const Article = require('./models/Article')
 const articleRouter = require('./controllers/articles');
 
 //connect with mongodb
-mongoose.connect('mongodb+srv://Mesbaul:YauYRJiEbqi2w65u@cluster0.g2wug.mongodb.net/Blog?retryWrites=true&w=majority', {useNewUrlParser: true,
+mongoose.connect(process.env.URI, {useNewUrlParser: true,
 useUnifiedTopology: true,
 useCreateIndex: true})
 
