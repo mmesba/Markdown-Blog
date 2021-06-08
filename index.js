@@ -37,7 +37,7 @@ app.get('/', async(req, res)=>{
 app.use('/articles', articleRouter);
 
 
-app.listen(3000, ()=>{
+app.listen(process.env.PORT || 3000, ()=>{
     console.log(`listening Markdown app`);
 })
 // export the module.
