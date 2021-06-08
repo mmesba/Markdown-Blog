@@ -13,9 +13,12 @@ const Article = require('./models/Article')
 const articleRouter = require('./controllers/articles');
 
 //connect with mongodb
-mongoose.connect('mongodb://localhost/markdown_blog', {useNewUrlParser: true,
+mongoose.connect('mongodb+srv://Mesbaul:YauYRJiEbqi2w65u@cluster0.g2wug.mongodb.net/Blog?retryWrites=true&w=majority', {useNewUrlParser: true,
 useUnifiedTopology: true,
 useCreateIndex: true})
+
+.then(()=>console.log(`connected with atlas`))
+.catch(err=>console.log(err))
 
 // Module scaffolding.
 const app = express();
